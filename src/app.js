@@ -21,5 +21,10 @@ app.use(express.json({
 app.use(limiter);
 
 app.use('/api/users', userRoutes);
+app.get('/api/hello', (req, res) => {
+  res.json({
+    message: 'Hello from People Hub API'
+  });
+});
 
 export default app;
